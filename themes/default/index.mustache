@@ -1,0 +1,20 @@
+<main>
+    {{#Issues}}
+    <div class="mb4 ">
+        <div class="border-box w-100 db dt-l">
+            <a class="db dtc-l v-mid w-100 w-75-l no-underline dim" href={{Link}}>
+                <h2 class="mb0 blue">{{Title}}</h2>
+            </a>
+            <p class="db dtc-l v-mid w-100 w-25-l tl tr-l o-60">{{Created.Weekday}}, {{Created.Month}} {{Created.Day}}, {{Created.Year}}</p>
+        </div>
+        <p class="navy">
+            {{{Summary}}}
+        </p>
+        <div class="pt2">
+            {{#Labels}}
+            <span class="b--solid br2 pb1 pt1 pl2 pr2 mr2 navy b--light-blue tag">{{.}}</span>
+            {{/Labels}}
+        </div>
+    </div>
+    {{/Issues}}
+</main>

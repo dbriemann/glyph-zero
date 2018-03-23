@@ -1,18 +1,26 @@
 # section repository contains all data regarding the repository that contains
 # the site/blog issues.
 [repository]
-# 'users' defines all users whose issues will be imported into the blog
+# users defines all users whose issues will be imported into the blog
 # the first user must be the owner of the blog repository
 # all usernames are login names for github
-users = [] # e.g. ["johndoe"]
-# 'name' is just the name of the repository containing the blog issues/articles
-name = "" # e.g. "blog"
-# 'target_dir' is where juicer puts the built files. By default the docs folder is
-# used (see github pages documentation for more info). 
-# This is the recommended way.
-target_dir = "docs"
+users = ["your_github_username"]
+# name is just the name of the repository containing the blog issues/articles
+name = "blog"
 
 # section site contains all data that will be used in the statically generated
-# html. This includes titles, styles etc.
+# html. 
 [site]
-title = "My Awesome glyph-powered site"
+title = "Your Title"
+author = "Your Name"
+onelinedesc = "Describe your site in one line"
+twitter = "your_twitter_handle"
+mail = "your@email.com"
+theme = "default"
+
+# section custom allows to pass custom data into the glyph templating process.
+[custom]
+about = { name = "About", link = "https://your.homepage" }
+
+# for example:
+# my_pets = ["Tom", "Jerry"]

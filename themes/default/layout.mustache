@@ -1,0 +1,54 @@
+<!doctype html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>{{#Issue}}{{Issue.Title}} - {{/Issue}}{{Site.Title}}</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="tachyons.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="mw8 center pa2 sans-serif">
+	<header class="mb5">
+		<nav class="border-box w-100 db dt-l pt3 bb bw1 b--orange">
+			<a class="db dtc-l v-mid w-100 w-75-l no-underline" href="index.html">
+				<h1 class="fw7 f1 measure mb3 mt3 navy tracked-tight tc tl-l">{{Site.Title}}</h1>
+			</a>
+			<div class="db dtc-l v-mid w-100 w-25-l tc tr-l">
+				{{#Custom.about}}
+				<a class="pr3 no-underline f3 fw7 blue dim" href={{link}}>{{name}}</a>
+				{{/Custom.about}}
+				<a class="no-underline f3 fw7 blue dim" href="feed.atom">Feed</a>
+			</div>
+		</nav>
+		{{#Site.OneLineDesc}}
+		<p class="mt1 o-60">{{Site.OneLineDesc}}</p>
+		{{/Site.OneLineDesc}}
+	</header>
+	{{{content}}}
+	<footer class="border-box w-100 db dt-l mt5 mb4 bt bw1 b--orange pt2 f6">
+		<div class="db dtc-l v-mid w-100 w-50-l">
+			{{#Site.Author}}
+			<span class="navy">&copy; {{Today.Year}} {{Site.Author}}</span>
+			<span class="orange">/</span>
+			{{/Site.Author}} 
+			{{#Site.Twitter}}
+			<a class="link blue no-underline" href="https://twitter.com/{{Site.Twitter}}">@{{Site.Twitter}}</a>
+			<span class="orange">/</span>
+			{{/Site.Twitter}}
+			{{#Site.Mail}}
+			<a class="link blue no-underline" href="mailto:{{Site.Mail}}" target="_top">{{Site.Mail}}</a>
+			{{/Site.Mail}}
+		</div>
+		<div class="db dtc-l v-mid w-100 w-50-l tc tr-l">
+			<span class="navy">This blog is powered by</span>
+			<a class="no-underline blue" href="https://github.com/dbriemann/glyph">Glyph</a>
+		</div>
+		<div></div>
+	</footer>
+</body>
+
+</html>
