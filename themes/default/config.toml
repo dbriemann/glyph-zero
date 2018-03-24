@@ -1,0 +1,15 @@
+Name = "default"
+IssueTemplate = { Source = "issue.mustache", Layout = "layout.mustache" } 
+IndexTemplate = { Source = "index.mustache", Layout = "layout.mustache", Target = "index.html" }
+
+OtherTemplates = [
+    # For example
+    # { Source = "legal_notice.mustache", Target = "legal_notice.html" }
+    # will render legal_notice.mustache to legal_notice.html without using a layout
+    # whereas
+    # { Source = "shop.mustache", Layout = "layout.mustache", Target = "shop.html" }
+    # will render shop.mustache to shop.html within the default layout (layout.mustache).
+]
+
+[Custom]
+About = { Name = "About", Link = "https://your.homepage.link.here" }

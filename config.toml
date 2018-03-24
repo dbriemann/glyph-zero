@@ -1,26 +1,25 @@
-# section repository contains all data regarding the repository that contains
+# section Repository contains all data regarding the repository that contains
 # the site/blog issues.
-[repository]
-# users defines all users whose issues will be imported into the blog
+[Repository]
+# Users defines all users whose issues will be imported into the blog
 # the first user must be the owner of the blog repository
 # all usernames are login names for github
-users = ["your_github_username"]
-# name is just the name of the repository containing the blog issues/articles
-name = "blog"
+Users = ["your-github-username"]
+# Name is just the name of the repository containing the blog issues/articles
+Name = "blog"
 
-# section site contains all data that will be used in the statically generated
-# html. 
-[site]
-title = "Your Title"
-author = "Your Name"
-onelinedesc = "Describe your site in one line"
-twitter = "your_twitter_handle"
-mail = "your@email.com"
-theme = "default"
+# section Site contains all data that will be used in the statically generated html.
+[Site]
+Title = "Your Site Title"
+Author = "Your Name"
+OneLineDesc = "A short description of your content or something clever.."
+Twitter = "Your Twitter handle"
+Mail = "your email address"
+# in the theme folder there is a theme.toml which specifies theme specific pages
+Theme = "default"
 
 # section custom allows to pass custom data into the glyph templating process.
-[custom]
-about = { name = "About", link = "https://your.homepage" }
-
+[Custom]
 # for example:
-# my_pets = ["Tom", "Jerry"]
+# MyPets = ["Tom", "Jerry"]
+
