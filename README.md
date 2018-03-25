@@ -37,6 +37,8 @@ Congratulations you set up everything. This step was a one time thing. Now build
 
 Build the site at any time by running `make blog` or `glyph` directly. Remember that [glyph](https://github.com/dbriemann/glyph) needs to be in your path. With `make clean` you can clean all exported files (in the `docs` folder). Usually you won't need to do this.
 
+After building your site don't forget to add your docs folder to git and push to github.
+
 If you just built your blog for the first time go visit `<user>.github.io/<repo>` and after a short while you should see the raw skeleton of your blog without any posts (we will call them issues from now on).
 
 ## Creating Themes
