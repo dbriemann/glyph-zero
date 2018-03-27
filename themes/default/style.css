@@ -17,7 +17,7 @@ ol li { counter-increment: li; }
 ul li::before { content: "\2022"; color: #ff6300; display: inline-block; width: 1em; margin-left: -1em; } */
 li { padding: 0.2rem 0 0.2rem 0; }
 code, pre { background-color: #e6f5ff; }
-pre { margin: 1rem; padding: 0.8rem; width: 90%; margin-left: auto; margin-right:auto; border-left: 0.125rem solid #357edd; }
+pre { margin: 1rem; padding: 0.8rem; width: 90%; margin-left: auto; margin-right:auto; border-left: 0.125rem solid #357edd; overflow-x: auto; }
 .tag { border-width: 1px; font-size: 0.8rem; }
 @media screen and (max-width: 30em) {
     img { width: 100%; }
