@@ -7,13 +7,18 @@
             </a>
             <p class="db dtc-l v-mid w-100 w-25-l tl tr-l o-60">{{Created.Weekday}}, {{Created.Month}} {{Created.Day}}, {{Created.Year}}</p>
         </div>
-        <p class="navy">
+        <p class="navy w-100">
             {{{Summary}}}
         </p>
-        <div class="pt2">
-            {{#Labels}}
-            <span class="b--solid br2 pb1 pt1 pl2 pr2 mr2 navy b--light-blue tag">{{.}}</span>
-            {{/Labels}}
+        <div class="w-100 pt2 db dt-l">
+            <div class="db dtc-l v-mid w-100 w-75-l">
+                {{#Labels}}
+                <span class="b--solid br2 pb1 pt1 pl2 pr2 mr2 navy b--light-blue tag">{{.}}</span>
+                {{/Labels}}
+            </div>
+            <div class="db dtc-l v-mid w-100 w-25-l tl tr-l">
+                <a class="orange no-underline dim" href="{{{CommentsURL}}}">Discuss</a>
+            </div>
         </div>
     </div>
     {{/Issues}}
