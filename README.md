@@ -5,21 +5,21 @@ The origin template for all [glyph](https://github.com/dbriemann/glyph) powered 
 ## Project Structure
 
 ```bash
-├── config.toml					# contains all settings for Glyph
-├── docs						# the export folder for Glyph, used by Github pages
+├── config.toml                 # contains all settings for Glyph
+├── docs                        # the export folder for Glyph, used by Github pages
 ├── LICENSE
-├── Makefile					# commands for cleaning and building
+├── Makefile                    # commands for cleaning and building
 ├── README.md
-└── themes						# folder containing all themes
-    └── default					# the default theme used by Glyph
-        ├── config.toml			# settings file for a theme
-        ├── index.mustache		# template for the index page
-        ├── issue.mustache		# template for the issue page (mandatory)
-        ├── layout.mustache		# template for the site layout (frame for all other templates)
-        ├── README.md			# contains info about contributors
-        ├── style.css			# \
-        ├── tachyons.css		#  > custom styling css
-        └── tachyons.min.css	# /
+└── themes                      # folder containing all themes
+    └── default                 # the default theme used by Glyph
+        ├── config.toml         # settings file for a theme
+        ├── index.mustache      # template for the index page
+        ├── issue.mustache      # template for the issue page (mandatory)
+        ├── layout.mustache     # template for the site layout (frame for all other templates)
+        ├── README.md           # contains info about contributors
+        ├── style.css           # \
+        ├── tachyons.css        #  > custom styling css
+        └── tachyons.min.css    # /
     └── .. more themes
 ```
 
@@ -44,7 +44,7 @@ If you just built your blog for the first time go visit `https://<user>.github.i
 
 Writing issues is as simple as writing new issues in your Github repository. You just use the Github markdown editor directly or pre-write them locally and copy & paste them into a Github issue. When you are finished you run the build step locally and commit/push, done. Your new issue is live on your blog within about a minute.
 
-## Creating Themes
+## Creating Themes & Customizing
 
 You can just use the default theme provided by Glyph-Zero. How it looks can be seen on [my personal blog](https://dbriemann.github.io/blog/). If you don't like it or just want something entirely different, you should just create a new theme. The easiest way to do this is by copying the default theme and adjusting it to your needs.
 
@@ -54,6 +54,8 @@ Every theme consists of a directory in the themes folder and a few mandatory fil
 - `config.toml`: this file contains theme specific settings. Have a look at the config.toml of the default theme for a better understanding.
 - `issue.mustache`: the only template file that is mandatory is the issue template. It determines how a single issue will look after rendering .
 
-Glyph
+Glyph uses the [mustache](http://mustache.github.io/mustache.5.html) templating system to insert data into the final HTML pages. Glyph exports the following data by default:
 
+**TODO**
 
+You can also export custom data via the `Custom` properties of the config files.
