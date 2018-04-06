@@ -65,7 +65,7 @@ Glyph uses the [mustache](http://mustache.github.io/mustache.5.html) templating 
 
 The data here is completely specified in `config.toml` and exported to the template rendering process by Glyph.
 
-```toml
+```
 [Site]
     Title       = string, # site/blog title
     Author      = string, # author's name
@@ -94,19 +94,19 @@ The `custom` attribute allows to export custom data from the config file to the 
 
 The export of issues has two possible cases. For the `issue.mustache` template only the current Issue is exported:
 
-```toml
+```
 Issue = Issue object # the issue that is rendered
 ```
 
 whereas for all other templates all issues are exported:
 
-```toml
+```
 Issues = []Issue # array of all issues
 ```
 
 In any case a single `Issue` is defined as follows:
 
-```toml
+```
 [Issue]
     Number      = int           # Github issue number (not id)
     Title       = string        # original issue title
@@ -122,7 +122,7 @@ In any case a single `Issue` is defined as follows:
 
 These exports all come from the theme config file `config.toml` in the theme folder.
 
-```toml
+```
 [Theme]
     Name            = string                # name of the template, must match directory name
     IndexTemplate   = Template              # the template used to render index.html
@@ -133,7 +133,7 @@ These exports all come from the theme config file `config.toml` in the theme fol
 
 A single template is structured as follows:
 
-```toml
+```
     Source = string     # the source template file
     Layout = string     # the layout template file (optional)
                         # a layout acts like a frame for other templates
@@ -142,7 +142,7 @@ A single template is structured as follows:
 
 ### Utility Exports
 
-```toml
+```
 Today = time.Time type from the Go standard library   # exports the time of building.
 ```
 
