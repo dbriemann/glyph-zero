@@ -1,5 +1,5 @@
 Name = "default"
-IssueTemplate = { Source = "issue.mustache", Layout = "layout.mustache" } 
+IssueTemplate = { Source = "issue.mustache", Layout = "layout.mustache" } # IssueTemplate ignores Target
 IndexTemplate = { Source = "index.mustache", Layout = "layout.mustache", Target = "index.html" }
 
 OtherTemplates = [
