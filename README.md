@@ -5,13 +5,13 @@ The origin template for all [glyph](https://github.com/dbriemann/glyph) powered 
 ## Project Structure
 
 ```bash
-├── config.toml                 # contains all settings for Glyph
-├── docs                        # the export folder for Glyph, used by Github pages
+├── config.toml                 # contains all settings for glyph
+├── docs                        # the export folder for glyph, used by Github pages
 ├── LICENSE
 ├── Makefile                    # commands for cleaning and building
 ├── README.md
 └── themes                      # folder containing all themes
-    └── default                 # the default theme used by Glyph
+    └── default                 # the default theme used by glyph
         ├── config.toml         # settings file for a theme
         ├── index.mustache      # template for the index page
         ├── issue.mustache      # template for the issue page (mandatory)
@@ -47,11 +47,11 @@ Writing issues is as simple as writing new issues in your Github repository. You
 Two important points you should know:
 
 - The first paragraph of your issue is treated as summary for the blog post.
-- If you want to _delete_ an issue, just close it and rebuild with Glyph. Closed issues will not be exported to HTML. You should also run `make clean` before building to make sure the old file is gone.
+- If you want to _delete_ an issue, just close it and rebuild with glyph. Closed issues will not be exported to HTML. You should also run `make clean` before building to make sure the old file is gone.
 
 ## Creating Themes & Customizing
 
-You can just use the default theme provided by Glyph-Zero. How it looks can be seen on [my personal blog](https://dbriemann.github.io/blog/). If you don't like it or just want something entirely different, you should just create a new theme. The easiest way to do this is by copying the default theme and adjusting it to your needs.
+You can just use the default theme provided by glyph-zero. How it looks can be seen on [my personal blog](https://dbriemann.github.io/blog/). If you don't like it or just want something entirely different, you should just create a new theme. The easiest way to do this is by copying the default theme and adjusting it to your needs.
 
 Every theme consists of a directory in the themes folder and a few mandatory files (see Project Structure above). The name of the directory is the theme's name. Files that must exist for every theme are: 
 
@@ -59,11 +59,11 @@ Every theme consists of a directory in the themes folder and a few mandatory fil
 - `config.toml`: this file contains theme specific settings. Have a look at the config.toml of the default theme for a better understanding.
 - `issue.mustache`: the only template file that is mandatory is the issue template. It determines how a single issue will look after rendering .
 
-Glyph uses the [mustache](http://mustache.github.io/mustache.5.html) templating system to insert data into the final HTML pages. Glyph lets you access the following data in your templates:
+glyph uses the [mustache](http://mustache.github.io/mustache.5.html) templating system to insert data into the final HTML pages. glyph lets you access the following data in your templates:
 
 ### Exports from config.toml
 
-The data here is completely specified in `config.toml` and exported to the template rendering process by Glyph.
+The data here is completely specified in `config.toml` and exported to the template rendering process by glyph.
 
 ```
 [Site]
