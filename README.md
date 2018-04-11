@@ -44,10 +44,13 @@ If you just built your blog for the first time go visit `https://<user>.github.i
 
 Writing issues is as simple as writing new issues in your Github repository. You just use the Github markdown editor directly or pre-write them locally and copy & paste them into a Github issue. When you are finished you run the build step locally and commit/push, done. Your new issue is live on your blog within about a minute.
 
-Two important points you should know:
+Some important points to keep in mind:
 
-- The first paragraph of your issue is treated as summary for the blog post.
-- If you want to _delete_ an issue, just close it and rebuild with glyph. Closed issues will not be exported to HTML. You should also run `make clean` before building to make sure the old file is gone.
+- **Summaries**: The first paragraph of your issue is treated as summary for the blog post. This summary is shown in the index list of the blog.
+- **Drafts**: You can create a draft by attaching the `draft` label to the issue. Issues with a `draft` label are not exported to HTML. You may at any point remove the label and rebuild with glyph to export or readd the label and rebuild to unpublish again.
+- **Deletions**: If you want to _delete_ an issue, just close it and rebuild with glyph. Closed issues will not be exported to HTML. 
+
+Always remember to run `make clean` if you want to delete old files from the source tree. This may be useful after deletion or un-publishing. E.g. if you deleted(closed) an issue Glyph will not export it anymore but the file is still there. Running `make clean` and then `make blog` will only keep the currently valid files.
 
 ## Creating Themes & Customizing
 
