@@ -1,3 +1,15 @@
+# ***********************************************
+# *** DO NOT ENTER YOUR GITHUB API TOKEN HERE ***
+# ***********************************************
+# GithubToken DOES NOT contain the actual API token.
+# GithubToken contains THE NAME OF THE ENVIRONMENT VARIABLE HOLDING THE TOKEN.
+# Usually just leave this as the default and export your API token if you want to use one.
+# Glyph also works without a Github API token. It is only needed for certain features (NOT IMPLEMENTED YET).
+#
+# This is a security measure so people don't commit their API token to their git repository.
+GithubToken = "GLYPH_GITHUB_TOKEN"
+
+
 # section Repository contains all data regarding the repository that contains
 # the site/blog issues.
 [Repository]
