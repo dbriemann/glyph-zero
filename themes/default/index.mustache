@@ -1,4 +1,9 @@
 <main>
+    {{#SelectedLabel}}
+    <div class="border-box w-100 navy">
+        <h4 class="pl2 pb1 pt1 ba bw1 br2 bg-light-blue b--light-blue">Label: {{Name}}</h4>
+    </div>
+    {{/SelectedLabel}}
     {{#Issues}}
     <div class="mb4">
         <div class="border-box w-100 db dt-l">
@@ -13,11 +18,11 @@
         <div class="w-100 pt2 db dt-l">
             <div class="db dtc-l v-mid w-100 w-80-l">
                 {{#Labels}}
-                <span class="b--solid br2 pb1 pt1 pl2 pr2 mr2 navy b--light-blue tag">{{.}}</span>
+                <a class="b--solid br2 link dim pb1 pt1 pl2 pr2 mr2 dib navy bg-light-blue b--navy tag" href={{Link}}>{{Name}}</a>                
                 {{/Labels}}
             </div>
             <div class="db dtc-l v-mid w-100 w-20-l tl tr-l">
-                <a class="b f6 link dim br2 ph3 pv2 mb2 dib white bg-orange" href="{{GithubLink}}">Discuss</a>
+                <a class="b f6 link dim br2 ph3 pv2 mb2 mt2 dib white bg-orange" href="{{GithubLink}}">Discuss</a>
             </div>
         </div>
     </div>

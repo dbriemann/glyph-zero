@@ -91,7 +91,7 @@ The data here is completely specified in `config.toml` and exported to the templ
 Custom = dict[string]:generic # a dictionary that allows definition of custom key/value pairs
 ```
 
-The `custom` attribute allows to export custom data from the config file to the template rendering process. There is a simple example included in `config.toml`.
+The `Custom` attribute allows to export custom data from the config file to the template rendering process. There is a simple example included in `config.toml`.
 
 ### Issue Exports
 
@@ -128,7 +128,7 @@ These exports all come from the theme config file `config.toml` in the theme fol
 ```
 [Theme]
     Name            = string                # name of the template, must match directory name
-    IndexTemplate   = Template              # the template used to render index.html
+    IndexTemplate   = Template              # the template used to render index.html and an index page for each label
     IssueTemplate   = Template              # the template used to render a single issue
     OtherTemplates  = []Template            # the rest of the templates used in the theme
     Custom          = dict[string]:generic  # a dictionary that allows definition of custom key/value pairs
